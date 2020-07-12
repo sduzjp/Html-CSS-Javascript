@@ -1,0 +1,230 @@
+<!--
+ * @Description: 
+ * @Author: 周健平
+ * @Date: 2020-04-04 20:12:36
+ * @LastEditors: Do not Edit
+ * @LastEditTime: 2020-07-08 09:53:23
+ -->
+<!--  -->
+<!DOCTYPE html>
+<!-- html标签用来定义html文档 -->
+<html lang="en">
+  <!-- head标签定义文档的标题，style属性设置背景颜色 -->
+  <!-- head元素是所有头部元素的容器，可包含脚本，指示浏览器在何处找到样式表，提供元信息
+title，base，link，meta，script，style都可以加到head标签处 
+title标签定义浏览器工具栏中的标题，提供在搜索引擎中的页面标题
+base标签为页面上的所有链接规定默认地址或默认目标
+link标签定义文档与外部资源之间的关系，常用于连接样式表
+style标签用于为html文档定义样式信息
+meta标签提供关于html文档的元数据，meta 元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。
+script标签用于定义客户端脚本-->
+  <head style="background-color: red;">
+    <!-- charset=“字符集”，为了解决语法正常解析问题 -->
+    <meta charset="UTF-8" />
+    <!-- <meta charset="GBK" /> -->
+    <!-- viewpoint 跟响应式设计有关 用于针对不同的设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 浏览器兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 网页描述 -->
+    <meta name="description" content="我的网站练习" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="前端开发。周健平" />
+    <!-- 不让搜索引擎搜到 -->
+    <meta name="robots" content="NOINDEX,NOFOLLOW" />
+    <!-- 网站标题 -->
+    <title>周健平-我的网站</title>
+  </head>
+  <!-- body定义文档的主题 -->
+  <body style="background-color: white;">
+    <!-- html标题，h1-h6等标签定义，定义的标题从大到小 -->
+    <!--font-family定义字体系列 text-align定义文本排版格式 -->
+    <h1 style="font-family: Verdana; text-align: center;">
+      MyComputer
+    </h1>
+    <!-- p标签定义文档的段落,定义字体系列、颜色、大小 -->
+    <p style="font-family: arial; color: red; font-size: 20px;">
+      这是第一段
+      <br />
+      这是一句话
+      <!-- br标签用来换行 -->
+      <br />
+      这是一句话
+    </p>
+    <!-- 设置水平线，用于分隔内容 -->
+    <hr />
+    <p>
+      <!-- 粗体 -->
+      <strong>
+        llallalaalalal
+      </strong>
+      <!-- 斜体 -->
+      <em>
+        fkasfhadskbgf
+      </em>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias amet earum
+      laborum aut adipisci illo nobis, facilis explicabo, quas, dicta quos optio
+      quod fuga. Repellendus, at? Nisi aut quidem expedita!
+    </p>
+    <hr />
+
+    <p>
+      这是第二段
+    </p>
+    <!-- 文本格式化 -->
+    <b>This text is bold</b>
+
+    <br />
+
+    <strong>This text is strong</strong>
+
+    <br />
+
+    <em>This text is emphasized</em>
+
+    <br />
+
+    <i>This text is italic</i>
+
+    <br />
+
+    <small>This text is small</small>
+
+    <br />
+
+    This text contains
+    <sub>subscript</sub>
+
+    <br />
+
+    This text contains
+    <sup>superscript</sup>
+    <hr />
+    <!-- 预文本格式 -->
+    <pre>
+    这是
+    预格式文本。
+    它保留了      空格
+    和换行。
+    </pre>
+
+    <p>pre 标签很适合显示计算机代码：</p>
+
+    <pre>
+    for i = 1 to 10
+     print i
+    next i
+    </pre>
+
+    <!-- 计算机代码格式 -->
+    <code>Computer code</code>
+    <br />
+    <kbd>Keyboard input</kbd>
+    <br />
+
+    <samp>Sample text</samp>
+    <br />
+    <var>Computer variable</var>
+    <br />
+
+    <p><a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+
+    <hr />
+    <!-- target属性 -->
+    <p>
+      <a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
+    </p>
+
+    <!-- 插入图像 -->
+    <!-- <img src="picture.jpg">	picture.jpg 位于与当前网页相同的文件夹
+    <img src="images/picture.jpg">	picture.jpg 位于当前文件夹的 images 文件夹中
+    <img src="/images/picture.jpg">	picture.jpg 当前站点根目录的 images 文件夹中
+    <img src="../picture.jpg">	picture.jpg 位于当前文件夹的上一级文件夹中 -->
+    <p>
+      一幅图像：
+      <img src="/i/eg_mouse.jpg" width="128" height="128" />
+    </p>
+
+    <p>
+      一幅动画图像：
+      <img src="/i/eg_cute.gif" width="50" height="50" />
+    </p>
+
+    <p>
+      来自另一个文件夹的图像：
+      <img src="/i/ct_netscape.jpg" />
+    </p>
+
+    <p>
+      来自 W3School.com.cn 的图像：
+      <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif" />
+    </p>
+
+    <hr />
+    <!-- 表格 -->
+    <p>每个表格由 table 标签开始。</p>
+    <p>每个表格行由 tr 标签开始。</p>
+    <p>每个表格数据由 td 标签开始。</p>
+    <table border="1">
+      <caption>
+        我的标题
+      </caption>
+      <tr>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>电话</th>
+      </tr>
+      <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+      </tr>
+    </table>
+    <hr />
+
+    <!-- 块区域 -->
+    <div style="color: #00ff00;">
+      <h3>This is a header</h3>
+      <p>This is a paragraph.</p>
+    </div>
+  </body>
+
+  <!-- 分类块元素 -->
+  <head>
+    <style>
+      span.red {
+        color: red;
+      }
+      .cities {
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <div class="cities">
+    <h2>London</h2>
+
+    <p>
+      London is the capital city of England. It is the most populous city in the
+      United Kingdom, with a metropolitan area of over 13 million inhabitants.
+    </p>
+
+    <p>
+      Standing on the River Thames, London has been a major settlement for two
+      millennia, its history going back to its founding by the Romans, who named
+      it Londinium.
+    </p>
+  </div>
+  <hr />
+
+  <!-- 分类行内元素 -->
+  <body>
+    <h1>标题<span class="red">我的网站</span></h1>
+    <a href="http://www.cnta.com/" title="中国旅游网" target="_blank">
+      主要旅游网
+    </a>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+a {
+  text-decoration: none; /* 下划线：underline; none */
+  background: greenyellow; /* 背景色*/
+  color: red; /* 前景色*/
+  cursor: hand; /*光标放置在文本上时，为小手形状*/
+  font-family: 隶书;
+  font-size: 30px;
+  border: 1;
+} /* 字体大小*/
+body {
+  text-decoration: underline;
+  background-color: #ddccff;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+}

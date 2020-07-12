@@ -1,0 +1,111 @@
+<!--
+ * @Description: 表格布局实例1
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-09 09:34:51
+ * @LastEditors: Do not Edit
+ * @LastEditTime: 2020-07-09 22:40:25
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      表格布局
+    </title>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="background-color: yellowgreen; background-position: center;">
+    <table
+      width="200"
+      height="1"
+      style="background-color: teal; text-align: center; margin: auto;"
+    >
+      <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>成绩</td>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>黎明</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>王刚</td>
+        <td>91</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>张杰</td>
+        <td>78</td>
+      </tr>
+    </table>
+    <br />
+    <table
+      border="2"
+      style="background-color: teal; text-align: center; margin: auto;"
+    >
+      <tr>
+        <td rowspan="4">高考科目</td>
+        <td width="50">语文</td>
+        <td width="100">8:30-11:00</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td width="100">15:00-17:00</td>
+      </tr>
+      <tr>
+        <td>理综</td>
+        <td width="100">8:30-11:00</td>
+      </tr>
+      <tr>
+        <td>英语</td>
+        <td width="100">15:00-17:00</td>
+      </tr>
+    </table>
+    <br />
+    <table border="2" style="background-color: turquoise; margin: auto;">
+      <tr>
+        <td rowspan="5" width="50" align="center">cell1</td>
+        <td colspan="3" align="center">cell2</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">cell3</td>
+      </tr>
+      <tr>
+        <td width="60" align="center">cell4</td>
+        <td width="60" align="center">cell5</td>
+        <td width="60" align="center">cell6</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">cell7</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">cell8</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" height="200" cellspacing="0" cellpadding="2" border="0">
+      <tr>
+        <td
+          rowspan="2"
+          width="20%"
+          bgcolor="yellow"
+          align="center"
+          valign="middle"
+        >
+          Cell1
+        </td>
+        <td height="50%" bgcolor="lightblue" align="center" valign="middle">
+          Cell2
+        </td>
+      </tr>
+      <tr>
+        <td height="50%" bgcolor="beige" align="center" valign="middle">
+          Cell3
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

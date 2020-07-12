@@ -1,0 +1,66 @@
+<!--
+ * @Description: 列表样式综合案例
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-10 21:47:59
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 09:39:46
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS列表属性综合应用</title>
+    <style type="text/css">
+      h3 {
+        color: "#ffffff";
+        background-color: #9999ff;
+        text-align: center;
+      }
+      #li1 {
+        list-style-type: square; /* 标记为实心方块的列表 */
+      }
+      #li2 {
+        list-style-type: upper-roman; /* 标记为大写罗马字母的列表 */
+      }
+      #li3 {
+        list-style-image: url("eg_cute.gif"); /* 把图片作为列表标记的项 */
+        list-style-position: inside; /* 规定列表中列表项目标记的位置 */
+      }
+      #li4 {
+        list-style-image: url("eg_cute.gif");
+        list-style-position: outside;
+      }
+      #li5 {
+        list-style-image: url("eg_cute.gif");
+        list-style-position: inside;
+      }
+      .sp1 {
+        font-weight: bolder;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>CSS列表属性综合应用</h3>
+    <ul id="li1">
+      <li>
+        专业目录
+        <ol id="li2">
+          <li>计算机科学与技术专业</li>
+          <li>软件工程</li>
+          <li>信息管理与信息系统</li>
+        </ol>
+      </li>
+      <li>
+        图书
+        <ul>
+          <li id="li3"><span class="sp1">[inside]</span>计算机网络：计机。</li>
+          <li id="li4"><span class="sp1">[outside]</span>数据库管理。</li>
+          <li id="li5"><span class="sp1">[inside]</span>北斗卫星导航系统。</li>
+        </ul>
+      </li>
+      <li>期刊目录</li>
+    </ul>
+  </body>
+</html>

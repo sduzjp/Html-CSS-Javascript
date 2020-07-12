@@ -1,0 +1,32 @@
+<!--
+ * @Description: 文本框和密码框案例
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-11 14:56:34
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 15:12:54
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本框和密码框案例</title>
+  </head>
+  <body>
+    <h4>输入用户信息</h4>
+    <form>
+      用户名:
+      <!-- 单行文本输入框 maxlength为单行输入框输入的最大字符数，size为设置单行输入框可显示的最大字符数，value为文本框的值，指定输入框中的初始值，readonly只读不可编辑 -->
+      <input type="text" maxlength="20" size="10" />
+      身份:
+      <input type="text" readonly value="学生" /><br />
+      密&nbsp;码:<!-- nbsp为空格 -->
+      <!-- password为设置密码框，不显示输入 -->
+      <input type="password" name="psw" maxlength="20" size="10" />
+      <h3>请您填写宝贵意见：</h3>
+      <!-- 多行文本输入框：rows指定输入的行数，cols指定输入的列数，wrap指定文本自动换行，值分别为off|physical|virtual -->
+      <textarea name="info" rows="4" cols="50" wrap="virtual"></textarea>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!--
+ * @Description: 表单的定义域和域标题
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-11 14:37:17
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 14:52:32
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>信息登记表</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <!-- 限定定义域标签 -->
+        <legend align="center">基本信息</legend>
+        <!-- 标记定义域的标题 -->
+        <div style="margin-left: 60px;">
+          姓名: <input name="name" type="text" /> 性别:
+          <!-- input type为输入控件类型标记，name为输入控件名字，value保存用户的输入和选择 -->
+          <input name="sex" type="text" />
+          身高: <input name="height" type="text" /> 体重:
+          <input name="weight" type="text" />
+          兴趣爱好:
+          <input type="text" />
+          学习成绩:
+          <input type="text" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend align="center">其他信息</legend>
+        竞选职位：<input type="text" />
+      </fieldset>
+    </form>
+  </body>
+</html>

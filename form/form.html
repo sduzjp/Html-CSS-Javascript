@@ -1,0 +1,122 @@
+<!--
+ * @Description: form表单
+ * @Author: 周健平
+ * @Date: 2020-04-05 10:39:32
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 14:30:55
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form表单</title>
+  </head>
+  <body>
+    <form action="process.php">
+      <!-- 文本 -->
+      <div>
+        <label for="name">姓名</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="
+             zjp"
+        />
+      </div>
+
+      <!-- 年龄 -->
+      <div>
+        <label for="age">年龄</label>
+        <input type="number" name="age" id="age" placeholder="请输入年龄" />
+      </div>
+
+      <!-- 生日 -->
+      <div>
+        <label for="birthday">生日</label>
+        <input
+          type="date"
+          name="birthday"
+          id="birthday"
+          placeholder="请输入生日"
+        />
+      </div>
+
+      <!-- 邮箱 -->
+      <div>
+        <label for="email">邮箱</label>
+        <input type="email" name="email" id="email" placeholder="请输入邮箱" />
+      </div>
+      <!-- textarea -->
+      <div>
+        <label for="message">信息</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </div>
+
+      <!-- select选项 -->
+      <div>
+        <label for="sex">性别</label>
+        <select name="sex" id="sex">
+          <option value="male">男</option>
+          <option value="female">女</option>
+        </select>
+      </div>
+
+      <!-- 密码 -->
+      <div>
+        <label for="password">密码</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="请输入密码"
+        />
+      </div>
+
+      <!-- radio -->
+      <div>
+        <label for="membership">成员</label>
+        <input type="radio" name="membership" id="membership" value="vue" />vue
+        <input
+          type="radio"
+          name="membership"
+          id="membership"
+          value="react"
+        />react
+        <input
+          type="radio"
+          name="membership"
+          id="membership"
+          value="node"
+        />node
+      </div>
+
+      <!-- checkbox -->
+      <div>
+        <label for="membership">成员</label>
+        <input
+          type="checkbox"
+          name="membership"
+          id="membership"
+          value="vue"
+        />vue
+        <input
+          type="checkbox"
+          name="membership"
+          id="membership"
+          value="react"
+        />react
+        <input
+          type="checkbox"
+          name="membership"
+          id="membership"
+          value="node"
+        />node
+      </div>
+
+      <!-- submit -->
+      <input type="submit" value="注册" />
+    </form>
+  </body>
+</html>

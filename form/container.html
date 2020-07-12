@@ -1,0 +1,38 @@
+<!--
+ * @Description: 表单容器
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-11 14:22:35
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 14:56:00
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>课程成绩表单</title>
+  </head>
+  <body style="text-align: center;">
+    <h3>输入课程成绩</h3>
+    <form
+      name="form1"
+      method="post"
+      action="form_action.jsp"
+      enctype="text/plain"
+    >
+      <!-- 设置表单名字，定义服务器表单处理程序从表单获取信息的方式，
+        表单处理程序的网络路径和程序名，规定表单数据在发送到服务器之前进行编码的方式 -->
+      姓名:
+      <input type="text" size="30" /><br />
+      高等数学:
+      <input type="text" size="28" /><br />
+      大学物理:
+      <input type="text" size="28" /><br /><br />
+      <input type="submit" value="成绩提交" />
+      <!-- submit按钮，默认值为提交查询内容，value为按钮名称，点击后将表单数据提交给服务器 -->
+      <input type="reset" value="成绩重置" style="margin-left: 30px;" />
+      <!-- reset按钮，默认为重置，点击该按钮可将表单域的内容清空 -->
+    </form>
+  </body>
+</html>

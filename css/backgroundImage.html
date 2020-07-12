@@ -1,0 +1,55 @@
+<!--
+ * @Description: CSS层叠样式单之背景颜色、图像位置
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-10 15:33:54
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-10 19:25:38
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>背景图像、位置与附件</title>
+    <style type="text/css">
+      h3 {
+        color: #ffffff;
+        background-color: #6600ff;
+        text-align: center;
+        padding: 10px;
+      }
+      #p1 {
+        background-image: url("Header.jpg");
+        background-repeat: no-repeat;
+        text-align: center;
+        background-position: center;
+      }
+      #p2 {
+        background-image: url("text.jpg");
+        background-attachment: fixed;
+        font-size: 24px;
+      }
+      #p3 {
+        width: 100%;
+        height: 500;
+        background: #99ccff url("Header.jpg") no-repeat center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>设置背景图像、位置与附件</h3>
+    <p style="text-align: center;">
+      <img src="innovationCollege.png" width="250" height="250" />
+    </p>
+    <p id="p1">[图像水平垂直居中]昨天上午，人民致以节日问候和美好祝福。</p>
+    <p id="p2">
+      [图像水平居左到顶] 2020年7月1日，是中国共产党建党99周年。
+      为了让党员们牢记身为党员的责任，让党员们更加深入理解党的誓词，上午10：00，信息学院举行了以“不忘初心跟党走，重温誓词再扬帆”为主题的纪念中国共产党成立99周年主题党日活动暨2020年春季预备党员宣誓活动。
+      本科生党支部党员、预备党员和入党积极分子们在信息学院124会议室以及线上腾讯会议参与了这次主题团日活动。
+    </p>
+    <p id="p3">
+      [背景复合属性应用]昨天上午，
+      2020年7月1日，是中国共产党建党99周年。为了让党员们牢记身为党员的责任，让党员们更加深入理解党的誓词，上午10：00，信息学院举行了以“不忘初心跟党走，重温誓词再扬帆”为主题的纪念中国共产党成立99周年主题党日活动暨2020年春季预备党员宣誓活动。本科生党支部党员、预备党员和入党积极分子们在信息学院124会议室以及线上腾讯会议参与了这次主题团日活动。
+    </p>
+  </body>
+</html>

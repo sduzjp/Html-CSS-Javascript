@@ -1,0 +1,69 @@
+<!--
+ * @Description: css选择器
+ * @Author: 周健平
+ * @Date: 2020-04-05 14:17:17
+ * @LastEditors: Do not Edit
+ * @LastEditTime: 2020-04-05 15:17:32
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器</title>
+    <style>
+      /* 标签选择器 */
+      body {
+        color: black;
+      }
+      /* 类选择器 */
+      .primary-Heading {
+        color: blue;
+      }
+      /* id选择器 */
+      #welcome {
+        font-size: 20px;
+      }
+      /* 多选择器 */
+      #welcome,
+      #about {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      /* 嵌套选择器 */
+      #welcome p {
+        color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="welcome">
+      <h1 class="primary-Heading">
+        Heading 1
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere
+        officia sed, optio earum quasi veniam quia maiores fugiat et est aut
+        temporibus eveniet fugit tempora reiciendis! Numquam, autem ratione?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        officia itaque soluta nihil ipsam deleniti placeat deserunt eveniet,
+        natus maiores.
+      </p>
+    </div>
+
+    <div id="about">
+      <h2>
+        Heading 2
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eius
+        consequuntur. Odit officiis accusamus porro officia illo deserunt magnam
+        laboriosam architecto minus necessitatibus, soluta voluptates quidem,
+        assumenda ad quos inventore?
+      </p>
+    </div>
+  </body>
+</html>

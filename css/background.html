@@ -1,0 +1,40 @@
+<!--
+ * @Description: CSS层叠样式单之背景
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-10 15:19:19
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-10 19:16:21
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      body {
+        background-color: yellow;
+      }
+      h1 {
+        background-color: #00ff00;
+      }
+      h2 {
+        background-color: transparent; /*背景色为透明，则继承了body中的背景色*/
+        color: red;
+      }
+      p {
+        background-color: rgb(250, 0, 255);
+      } /*使用三原色来定义颜色，依次为红色，绿色，蓝色*/
+      p.Interdistance {
+        background-color: gray;
+        padding: 100px; /*设置内边距*/
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body style="text-align: center;">
+    <h1>这是标题 1</h1>
+    <h2>这是标题 2</h2>
+    <p style="font-size: 30px;">这是段落</p>
+    <p class="Interdistance">这个段落设置了内边距</p>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+/* css第三种样式 */
+h3 {
+  color: blue;
+}
+body {
+  background-color: greenyellow;
+  font-size: 25px;
+  text-align: center;
+  border: 1;
+  margin: auto;
+}

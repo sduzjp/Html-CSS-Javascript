@@ -1,0 +1,40 @@
+<!--
+ * @Description: CSS层叠样式单之综合
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-10 15:13:27
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-10 19:11:09
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>CSS样式</title>
+    <style type="text/css">
+      @import url("sample.css");
+      h1 {
+        color: red;
+      }
+      .mycolor {
+        color: green;
+        font-family: 幼圆;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.cs.sdu.edu.cn">计算机科学与技术学院</a>
+    <br />
+    <br />
+    <span style="background-color: #ff0000; color: yellow; font-size: 30pt;">
+      span用CSS内嵌样式</span
+    >
+    <br />
+    <br />
+    <h1>未使用内嵌样式</h1>
+    <h1 style="color: blue; font-size: 30px;">山东大学</h1>
+    <p style="font-size: 30px;">
+      使用自己定义的样式:<span class="mycolor">绿色</span>
+    </p>
+  </body>
+</html>

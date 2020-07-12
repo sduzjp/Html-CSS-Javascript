@@ -1,0 +1,49 @@
+<!--
+ * @Description: 单选按钮和复选按钮
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-11 15:13:15
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-11 15:21:27
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>按钮</title>
+    <style type="text/css">
+      fieldset {
+        width: 300px;
+        height: 120px;
+        border: 2px double #003399;
+        padding-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>请填写个人信息</legend>
+        <br />
+        姓名：<input type="text" name="xm" maxlength="10" size="10" /><br />
+        爱好：<input type="checkbox" name="c1" value="读书" />读书
+        <!-- 复选按钮checkbox，每一个checkbox对应一个value，checked设置复选框缺省时是否被选中 -->
+        <input type="checkbox" name="c2" value="唱歌" checked="checked" />唱歌
+        <input
+          type="checkbox"
+          name="c3"
+          value="游戏"
+          checked="checked"
+        />游戏<br />
+        性别：<input
+          type="radio"
+          name="sex"
+          value="male"
+          checked="checked"
+        />男性 <input type="radio" name="sex" value="female" />女性
+        <!-- 单选按钮往往是若干个radio为一组，每一个radio必须有且仅有一个value，value存储单选按钮的取值，不同name的单选钮有不同的value -->
+      </fieldset>
+    </form>
+  </body>
+</html>
