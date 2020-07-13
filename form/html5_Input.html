@@ -1,0 +1,166 @@
+<!--
+ * @Description: html5新增的输入控件类型
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-13 13:48:25
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-13 14:26:01
+-->
+<!-- html新增类型有
+color   date    datetime    datetime-local     email     month   
+number  range   search      tel     time    url     week
+-->
+<!-- 老式浏览器不支持的输入类型会默认为输入类型为text -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html5新增输入类型</title>
+  </head>
+  <body style="margin: auto; text-align: center;">
+    <h1>输入类型：number</h1>
+    <p>
+      根据浏览器支持： 数值约束会应用到输入字段中。
+    </p>
+    <!-- action是表单提交处理的网络路径和文件名 -->
+    <form action="/demo/demo_form.asp">
+      数量（1 到 5 之间）：
+      <!-- 如果数值不在1到5之间，会弹出提示框显示 -->
+      <input type="number" name="quantity" min="1" max="5" />
+      <input type="submit" />
+    </form>
+
+    <p><b>注释：</b>IE9 及早期版本不支持 type="number"。</p>
+    <br />
+    <br />
+    <!-- 输入类型为date，显示日期，用于包含日期的输入字段 -->
+    <h1>输入类型：date</h1>
+    <p>根据浏览器支持：当您填写输入字段时会弹出日期选择器。</p>
+    <form action="/demo/demo_form.asp">
+      生日：<input type="date" name="bday" /><br /><br />
+      请输入 1980-01-01 之前的日期：<br />
+      <input type="date" name="bday" max="1979-12-31" /><br /><br />
+      请输入 2000-01-01 之后的日期：<br />
+      <input type="date" name="bday" min="2000-01-02" /><br /><br />
+      <input type="submit" />
+    </form>
+
+    <p>
+      <b>注释：</b> Firefox 或者Internet Explorer 11 以及更早版本不支持 不支持
+      type="date"。
+    </p>
+    <br />
+    <br />
+
+    <!-- 输入类型为颜色，用于包含输入颜色的字段 -->
+    <h1>输入类型：color</h1>
+    <p>
+      Depending on browser support: A color picker can pop-up when you enter the
+      input field.
+    </p>
+    <!-- 选择一个颜色，初始颜色值为#ff0000 -->
+    <form action="action_page.php">
+      Select your favorite color:
+      <input type="color" name="favcolor" value="#ff0000" />
+      <input type="submit" />
+    </form>
+    <p><b>Note:</b> type="color" is not supported in Internet Explorer.</p>
+    <br /><br />
+
+    <!-- 输入类型为range，用于包含一定范围的值的输入字段 -->
+    <h1>输入类型：range</h1>
+    <p>
+      根据浏览器支持：输入类型 "range" 可显示为滑动控件。
+    </p>
+    <form action="/demo/demo_form.asp" method="get">
+      Points:
+      <!-- 通过min，max，step设置最小值、最大值、步进值 -->
+      <input type="range" name="points" step="1" min="0" max="10" />
+      <input type="submit" />
+    </form>
+    <p><b>注释：</b>IE9 及早期版本不支持 type="range"。</p>
+    <br /><br />
+    <h1>输入类型：month</h1>
+    <p>
+      根据浏览器支持： 当您填写输入字段时会弹出日期选择器。
+    </p>
+    <!-- 输入类型为month，允许用户选择年份和月份 -->
+    <form action="/demo/demo_form.asp">
+      生日（月和年）：
+      <input type="month" name="bdaymonth" />
+      <input type="submit" />
+    </form>
+    <p>
+      <b>注释：</b>Firefox 或者 Internet Explorer 11 以及更早版本不支持
+      type="month"。
+    </p>
+    <br /><br />
+    <!-- 输入类型为week，允许用户选择周和年 -->
+    <h1>输入类型：week</h1>
+    <p>
+      根据浏览器支持： 当您填写输入字段时会弹出日期选择器。
+    </p>
+
+    <form action="action_page.php">
+      Select a week:
+      <input type="week" name="year_week" />
+      <input type="submit" />
+    </form>
+
+    <p><b>注释：</b> Internet Explorer 不支持 type="week"。</p>
+    <br /><br />
+    <!-- 允许用户选择时间（无时区） -->
+    <h1>输入类型：time</h1>
+    <p>
+      根据浏览器支持： 当您填写输入字段时会弹出日期选择器。
+    </p>
+
+    <form action="/demo/demo_form.asp">
+      请选取一个时间：
+      <input type="time" name="usr_time" />
+      <input type="submit" />
+    </form>
+
+    <p>
+      <b>注释：</b>Firefox 或者 Internet Explorer 11 以及更早版本不支持
+      type="time"。
+    </p>
+    <br /><br />
+    <!-- 输入类型为datetime-local，允许用户选择日期和时间，无时区 -->
+    <!-- 输入类型为datetime时，允许用户选择日期和时间，有时区，但是谷歌浏览器不支持 -->
+    <h1>输入类型：datetime-local</h1>
+    <p>
+      根据浏览器支持： 当您填写输入字段时会弹出日期选择器。
+    </p>
+
+    <form action="/demo/demo_form.asp">
+      生日（日期和时间）：
+      <input type="datetime-local" name="bdaytime" />
+      <input type="submit" value="Send" />
+    </form>
+
+    <p>
+      <b>注释：</b>Firefox 或者 Internet Explorer 不支持 type="datetime-local"。
+    </p>
+    <br /><br />
+    <!-- 用于对包含电子邮件的输入字段 -->
+    <h1>输入类型：email</h1>
+    <form action="/demo/demo_form.asp">
+      E-mail:
+      <input type="email" name="email" />
+      <input type="submit" />
+    </form>
+    <p><b>注释：</b>IE9 及更早版本不支持 type="email"。</p>
+    <br /><br />
+    <!-- 输入类型为search，用于对字段的搜索 -->
+    <h1>输入类型：search</h1>
+    <form action="/demo/demo_form.asp">
+      搜索谷歌：
+      <input type="search" name="googlesearch" />
+      <input type="submit" />
+    </form>
+    <br />
+    <br />
+  </body>
+</html>

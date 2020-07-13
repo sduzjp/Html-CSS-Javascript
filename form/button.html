@@ -4,7 +4,7 @@
  * @department: 山东大学
  * @Date: 2020-07-11 15:13:15
  * @LastEditors: 周健平
- * @LastEditTime: 2020-07-11 15:21:27
+ * @LastEditTime: 2020-07-13 13:37:24
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,16 @@
         width: 300px;
         height: 120px;
         border: 2px double #003399;
-        padding-left: 30px;
+        padding-left: 150px;
+        margin: auto;
+      }
+      #input {
+        width: 100px;
+        height: 25px;
+      }
+      #fieldset1 {
+        width: 400px;
+        height: 180px;
       }
     </style>
   </head>
@@ -29,13 +38,8 @@
         姓名：<input type="text" name="xm" maxlength="10" size="10" /><br />
         爱好：<input type="checkbox" name="c1" value="读书" />读书
         <!-- 复选按钮checkbox，每一个checkbox对应一个value，checked设置复选框缺省时是否被选中 -->
-        <input type="checkbox" name="c2" value="唱歌" checked="checked" />唱歌
-        <input
-          type="checkbox"
-          name="c3"
-          value="游戏"
-          checked="checked"
-        />游戏<br />
+        <input type="checkbox" name="c2" value="唱歌" />唱歌
+        <input type="checkbox" name="c3" value="游戏" />游戏<br />
         性别：<input
           type="radio"
           name="sex"
@@ -43,6 +47,28 @@
           checked="checked"
         />男性 <input type="radio" name="sex" value="female" />女性
         <!-- 单选按钮往往是若干个radio为一组，每一个radio必须有且仅有一个value，value存储单选按钮的取值，不同name的单选钮有不同的value -->
+      </fieldset>
+    </form>
+    <form>
+      <fieldset id="fieldset1">
+        <legend align: left|center|right>三种按钮submit、reset、button的应用</legend>
+        <h3>请输入用户信息：</h3>
+        用户名：<input type="text" name="username" size="10" id="input" />
+        密码：<input
+          type="password"
+          name="password"
+          size="10"
+          id="input"
+        /><br /><br />
+        &nbsp;&nbsp;<input type="submit" name="submit" value="提交" />
+        <input type="reset" name="reset" value="重置" id="input" />
+        <input
+          type="button"
+          name="button"
+          value="注册新用户"
+          id="input"
+          onclick="javascript:alert('注册新用户');"
+        /><!-- 普通按钮需要定义onclick属性才能进行表单处理，javascript语法：弹出提示框 -->
       </fieldset>
     </form>
   </body>

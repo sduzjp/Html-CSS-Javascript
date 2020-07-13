@@ -1,0 +1,39 @@
+<!--
+ * @Description: 下拉列表框
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-13 13:16:05
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-13 14:40:49
+-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>下拉列表框的应用</title>
+ </head>
+ <body style="margin: auto;text-align: center;">
+  <form>
+    <h3>请选择您的课程:</h3>
+    <!-- name为下拉式列表控件的名称；size为下拉式列表的高度，缺省时为1；multiple指定是否可以多选，不用赋值直接加入标记即可 -->
+     <select name="course" size="4" multiple>
+       <option value="c1" selected>C/C++程序设计</option><!-- selected为预选状态 -->
+       <option value="c2">计算机网络</option>
+       <option value="c3" >数据结构</option>
+       <option value="c4">Java程序设计</option>
+       <option value="c5">计算机组成原理</option>
+    </select>
+    <h3>请选择您的专业</h3>
+    <select width=200px style="font-size: 18px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <option selected>崇新学堂</option>
+        <option>微纳</option>
+        <option>通信工程</option>
+        <option>物联网工程</option>
+        <option>光电信息工程</option>
+        <option>电子信息工程</option>
+    </select>
+  </form>
+ </body>
+</html>
+
+</html>
