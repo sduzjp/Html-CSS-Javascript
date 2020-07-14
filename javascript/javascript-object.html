@@ -1,0 +1,146 @@
+<!--
+ * @Description: javascript对象
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-14 20:43:51
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-14 21:29:32
+-->
+<!-- javascript:String 字符块对象，用于处理已有的字符块-->
+<!-- javascript:Date 日期对象，用于处理日期和时间-->
+<!-- javascript:Array 数组对象，使用单独的变量名来存储一系列的值-->
+<!-- javascript:Boolean 逻辑对象，用于将非逻辑值转换为逻辑值true / false-->
+<!-- javascript:Math 算数对象，执行常见的算数任务-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript对象</title>
+    <script language="JavaScript">
+      function yourBrowser() {
+        document.details.Name.value = navigator.appName;
+        document.details.Version.value = navigator.appVersion;
+        document.details.Code.value = navigator.appCodeName;
+        document.details.Agent.value = navigator.userAgent;
+      }
+    </script>
+  </head>
+  <body align="center">
+    <script type="text/javascript">
+      var text = "HelloWorld！";
+      document.write(text.length); /* 输入字符串长度 */
+      document.write("<br>"); /* javascript输出换行 */
+      //   注意方法后面带上()
+      document.write(text.toUpperCase()); /* 输出字符串大写 */
+    </script>
+    <h3>Navigator对象--浏览器信息搜集</h3>
+    <div align="center">
+      <table border="1">
+        <form name="details">
+          <tr>
+            <td>浏览器名称</td>
+            <td><input type="text" name="Name" size="10"</td>
+          </tr>
+          <tr>
+            <td>浏览器版本</td>
+            <td><input type="text" name="Version" size="110"</td>
+          </tr>
+          <tr>
+            <td>浏览器代码名称</td>
+            <td><input type="text" name="Code" size="10"</td>
+          </tr>
+          <tr>
+            <td>代理商名称</td>
+            <td><input type="text" name="Agent" size="110"</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <input type="button" value="测试浏览器" onClick="yourBrowser()" />
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+    <!-- window对象表示浏览器窗口，每当body或者frameset标记出现时window对象就会自动创建
+    所有javascript全局对象、函数以及变量自动成为window对象的成员 -->
+    <h3>Window对象之location对象</h3>
+    <script>
+      // 重定向：在本网页下换url内容，直接在当前窗口跳转
+      function newDoc() {
+        window.location.assign("http://www.w3school.com.cn");
+      }
+    </script>
+    <input
+      type="button"
+      value="跳转到w3school"
+      onclick="newDoc()"
+      style="width: 100px; height: 30px;"
+    />
+    <h3>浏览器重定向实例</h3>
+    <script language="JavaScript">
+      function checkBrowser() {
+        //   根据浏览器名称进行判断
+        var name = navigator.appName;
+        if (name.indexOf("Netscape") != -1) {
+          document.location.href = "javascript-event.html";
+        } else {
+          if (name.indexOf("Microsoft") != -1) {
+            document.location.href = "javascript-event.html";
+          }
+        }
+      }
+    </script>
+    <p>
+      点击测试浏览器的命令按钮，将提示你使用的是何种浏览器。
+    </p>
+    <form method="post" action=" ">
+      <div align="center">
+        <input
+          type="button"
+          name="Button"
+          value="测试浏览器"
+          onClick="checkBrowser()"
+        />
+      </div>
+    </form>
+    <h3>history对象</h3>
+    <!-- back，go方法以及window的close方法谷歌浏览器不适用 -->
+    <form name="myForm" method="POST" action="/progs/feedback.jsp">
+      <input type="button" value="回前一个网页" onclick="history.go(-1);" />
+      <input
+        type="button"
+        value="另一种回前一个网页方法"
+        onclick="history.back();"
+      />
+      <input
+        type="button"
+        value="回后一个网页方法"
+        onclick="history.forward()"
+      />
+      <input type="button" value="关闭窗口" onclick="window.close()" />
+    </form>
+    <h3>document对象--图像的预加载实例</h3>
+    <script language="JavaScript">
+      if (document.images) {
+        one = new Image();
+        one.src = "/image/eg_cute.gif";
+        oneOver = new Image();
+        oneOver.src = "/image/innovationCollege.png";
+      }
+    </script>
+    <a
+      href="http://www.baidu.com"
+      onMouseOver="document.cert.src=oneOver.src"
+      onMouseOut="document.cert.src=one.src"
+    >
+      <img
+        width="200px"
+        height="200px"
+        src="/image/eg_cute.gif"
+        name="cert"
+        border="0"
+      />
+    </a>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!--
+ * @Description: javascript事件
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-14 20:02:11
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-14 20:42:53
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript事件</title>
+    <script type="text/javascript">
+      function show_confirm() {
+        //   confirm提供确认功能，对message参数提供 确认(ok)和取消(cancel)两个选择，若选择确认则返回true，选择取消则返回false
+        // 提供确认框，window.confirm()，window可省略，用于用户验证或接受某些信息
+        var r = confirm("Press a button!");
+        if (r == true) {
+          // 警告框/提示框，给用户一个消息，方法alert()，弹出框
+          alert("You pressed OK!");
+        } else {
+          alert("You pressed Cancel!");
+        }
+      }
+    </script>
+  </head>
+  <body align="center">
+    <input
+      type="button"
+      onclick="show_confirm()"
+      value="Show a confirm box"
+      style="width: 300px; height: 80px; margin-top: 100px;"
+    />
+    <br />
+    <br />
+    <script type="text/javascript">
+      function Welcome() {
+        alert("Welcome to javascript");
+      }
+      //   alert("Welcome to javascript");
+    </script>
+    <!-- 注意onclick写函数的时候带上()，不能只写函数名 -->
+    <input type="button" onclick="Welcome()" value="请点击" />
+    <br />
+    <br />
+    <!-- <script type="text/javascript">
+      prompt("What's your name", "yourname");
+    </script> -->
+    <!-- javascript对字母大小写敏感，需要区分；变量命名必须以字母或者下划线开始 -->
+    <!-- <script type="text/javascript">
+      name = prompt("请输入你的名字：");
+      //   未输入直接点确认name为"",直接点取消name为null，输入后并点击确认则弹出提示框
+      if (name != "null" && name != "") {
+        alert("Hello," + name);
+      }
+    </script> -->
+    <!-- open()方法：控制打开那些窗口以及其所包含的文档
+    open("URL","窗口名","特征列表") 
+    window.open("new.html", "newWindow", "toolbar=yes,location=1,directories=yes, 
+     status=yes,menubar=1,scrollbars=yes, resizable=0, width=200, height=200");
+    toolbar创建标准的工具条，location创建位置输入域，directories创建标准的目标按钮
+    status创建状态条，menubar创建在窗口顶端的菜单，scrollbars当文档超过当前窗口范围就创建滚动条
+    resizable允许用户重新调整窗口大小，width指定窗口的宽度、像素为单位，height指定窗口高度、像素为单位
+    top指定在Internet Explorer 4和Navigator 4中打开窗口的屏幕顶端坐标的y坐标
+    left指定在Internet Explorer 4和Navigator 4中打开窗口的屏幕顶端坐标的x坐标
+    -->
+    <script type="text/javascript">
+      function open_win() {
+        window.open("http://www.w3school.com.cn");
+      }
+    </script>
+    <input type="button" value="Open Window--w3school" onclick="open_win() " />
+    <br />
+    <br />
+    <!-- 注意打开谷歌搜索得翻墙 -->
+    <form>
+      <input
+        type="button"
+        value="打开谷歌搜索引擎窗口"
+        onClick="newWindow=open('http://www.google.com','google','toolbar=0,location=1,menubar=1,scrollbars=1,resizable=1') "
+      />
+      <!-- 使用OnClick事件被触发来自内联脚本的Open()方法 -->
+    </form>
+  </body>
+</html>
