@@ -1,0 +1,26 @@
+<!--
+ * @Description:  这段javascript脚本只能放在p id=demo之后才能起作用，不能放到之前或者头部head中 
+但是如果把这段javascript中的 var x = document.getElementById("demo")去掉，x都直接用document.getElementById("demo")
+那么这段代码放在p标签之前或者头部都可以起作用 
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-15 18:05:52
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-15 18:08:33
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var x = document.getElementById("demo");
+      function hello() {
+        // document.getElementById("demo").innerHTML = "helloworld";
+        x.innerHTML = "helloworld";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo">你好世界</p>
+    <button onclick="hello()">试一下</button>
+  </body>
+</html>

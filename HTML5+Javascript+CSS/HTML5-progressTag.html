@@ -1,0 +1,37 @@
+<!--
+ * @Description: HTML5新增页面标记--进度progress标记
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-15 13:58:31
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-15 14:04:56
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5--progress标记</title>
+  </head>
+  <body align="center">
+    <p>
+      <strong>文件下载进度：</strong>
+      <progress value="10" max="100">设置属性</progress>
+    </p>
+    <p>
+      <!-- 谷歌浏览器：空进度条会显示小块来回的滚动 -->
+      <strong>空进度条：</strong>
+      <progress>未设置属性</progress>
+    </p>
+    <p>
+      <!-- 当使用IE浏览器时meter标签的value不会显示，而是显示了标签中的内容3/10 -->
+      <strong>服务器CPU使用情况：</strong>
+      <meter value="0" high="1" low="0" optimum="0.5">3/10</meter>
+    </p>
+    <p>
+      <strong>内存使用情况：</strong>
+      <meter value="0.6" max="1" min="0" optimum="0.75">60%</meter>
+    </p>
+    <p><mark>注释：</mark>IE9以及更早的版本不支持progress、meter 标记。</p>
+  </body>
+</html>

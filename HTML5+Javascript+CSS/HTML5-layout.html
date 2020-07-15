@@ -1,0 +1,89 @@
+<!--
+ * @Description: HTML5新增语义元素进行页面布局
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-15 13:23:11
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-15 13:57:45
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5-Layout</title>
+  </head>
+  <body>
+    <header
+      style="
+        background-color: grey;
+        font-size: 25px;
+        text-align: center;
+        padding: 20px;
+      "
+    >
+      这是页眉
+    </header>
+    <nav
+      style="
+        background-color: grey;
+        font-size: 18px;
+        text-align: center;
+        padding: 3px;
+        margin-top: 5px;
+      "
+    >
+      <table align="center">
+        <tr style="width: 100px;">
+          <td>首页</td>
+          <td style="width: 100px;">个人简历</td>
+          <td style="width: 100px;">教育经历</td>
+          <td style="width: 100px;">研究方向</td>
+        </tr>
+      </table>
+    </nav>
+    <table border="1" style="margin-top: 5px;">
+      <tr>
+        <td style="background-color: grey;">
+          <article style="width: 800px; height: 400px; float: left;">
+            <p style="text-align: center; font-size: 25px;">
+              正文标题
+            </p>
+            <section
+              style="
+                margin: auto;
+                background-color: black;
+                color: white;
+                width: 750px;
+                height: 300px;
+                text-align: center;
+                font-size: 20px;
+              "
+            >
+              正文内容
+            </section>
+          </article>
+        </td>
+        <td style="background-color: grey;">
+          <aside
+            style="margin-left: 5px; width: 560px; height: 400px; float: right;"
+          >
+            侧边栏
+          </aside>
+        </td>
+      </tr>
+    </table>
+    <footer
+      style="
+        font-size: 25px;
+        background-color: grey;
+        margin-top: 5px;
+        padding: 5px;
+        text-align: center;
+      "
+    >
+      <!-- footer定义页脚 -->
+      CopyRight@2020 山东大学信息科学与工程学院崇新学堂 周健平
+    </footer>
+  </body>
+</html>

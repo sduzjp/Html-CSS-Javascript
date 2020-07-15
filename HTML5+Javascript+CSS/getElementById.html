@@ -1,0 +1,44 @@
+<!--
+ * @Description: HTML DOM--getElementById()
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-15 11:36:51
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-15 11:52:40
+-->
+<!-- html5将交互分离开，包括结构层（html），表现层（css），行为层（javascript） -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM</title>
+  </head>
+  <body align="center">
+    <div
+      style="
+        margin: auto;
+        width: 500px;
+        height: 100px;
+        font-size: 30px;
+        font-weight: bolder;
+      "
+    >
+      <!-- 限制div区域的大小 -->
+      <p id="id1">My Heading</p>
+    </div>
+    <button
+      type="button"
+      onclick="document.getElementById('id1').style.color='red'"
+      style="width: 150px; height: 50px;"
+    >
+      改变颜色
+    </button>
+    <input
+      type="button"
+      value="改变字体大小"
+      onclick="document.getElementById('id1').style.fontSize='20pt'"
+      style="width: 150px; height: 50px; margin-left: 20px;"
+    />
+  </body>
+</html>

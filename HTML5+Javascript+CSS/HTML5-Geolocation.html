@@ -1,0 +1,66 @@
+<!--
+ * @Description: HTML5-使用地理定位
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-15 15:13:05
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-15 18:04:29
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5-使用地理定位</title>
+  </head>
+  <body align="center">
+    <p id="demo">点击按钮，获取地理位置坐标</p>
+    <br />
+    <button type="button" onclick="getLocation()">获取当前地理位置</button>
+    <!-- 这段javascript脚本只能放在p id=demo之后才能起作用，不能放到之前或者头部head中 -->
+    <!-- 但是如果把这段javascript中的 var x = document.getElementById("demo")去掉，x都直接用document.getElementById("demo")
+        那么这段代码放在p标签之前或者头部都可以起作用 -->
+    <script>
+      // HTML5 Geolocation用于定位用户的位置
+      /* navigator.geolocation对象：showPosition()函数获取并显示经纬度
+                  getCurrentPosition()函数：参数是showPosition，若运行成功，则返回一个coordinates对象
+                  coordinates对象：position.coords.latitude
+                          position.coords.longitude
+                          coords,altitude海拔，海平面上以米为单位记
+                          coords.heading方向，从正北开始以度记
+                          coords.speed速度，以米/秒记 */
+      var x = document.getElementById("demo");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br />Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>
+<!-- 另一个关于javascript代码位置放置不同导致是否起作用 -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var x = document.getElementById("demo");
+      function hello() {
+        // document.getElementById("demo").innerHTML = "helloworld";
+        x.innerHTML = "helloworld";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo">你好世界</p>
+    <button onclick="hello()">试一下</button>
+  </body>
+</html> -->
