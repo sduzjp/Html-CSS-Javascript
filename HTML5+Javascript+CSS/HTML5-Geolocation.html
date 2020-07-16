@@ -4,7 +4,7 @@
  * @department: 山东大学
  * @Date: 2020-07-15 15:13:05
  * @LastEditors: 周健平
- * @LastEditTime: 2020-07-15 18:04:29
+ * @LastEditTime: 2020-07-16 11:00:57
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,9 @@
     <button type="button" onclick="getLocation()">获取当前地理位置</button>
     <!-- 这段javascript脚本只能放在p id=demo之后才能起作用，不能放到之前或者头部head中 -->
     <!-- 但是如果把这段javascript中的 var x = document.getElementById("demo")去掉，x都直接用document.getElementById("demo")
-        那么这段代码放在p标签之前或者头部都可以起作用 -->
+        那么这段代码放在p标签之前或者头部都可以起作用 
+      这是因为html文档是由上到下的解析顺序，ID要放到JS代码上面
+网页中的javaScript脚本代码往往需要在文档加载完成后才能够去执行，否则可能导致无法获取对象的情况-->
     <script>
       // HTML5 Geolocation用于定位用户的位置
       /* navigator.geolocation对象：showPosition()函数获取并显示经纬度

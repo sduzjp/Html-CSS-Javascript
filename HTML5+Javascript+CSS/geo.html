@@ -1,0 +1,54 @@
+<!--
+ * @Description: 获取当前地理位置
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-16 07:27:25
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-16 10:39:08
+--> 
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script>
+//var x=document.getElementById("demo");
+
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  //else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+ // x.innerHTML="Latitude: " + position.coords.latitude + 
+  "<br />Longitude: " + position.coords.longitude;
+document.write(	position.coords.latitude);
+  }
+</script> -->
+<script>
+  // var x = document.getElementById("demo");
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(showPosition);
+    } else {
+      document.getElementById("demo").innerHTML =
+        "Geolocation is not supported by this browser.";
+    }
+  }
+  function showPosition(position) {
+    document.getElementById("demo").innerHTML =
+      "Latitude: " +
+      position.coords.latitude +
+      "<br />Longitude: " +
+      position.coords.longitude;
+  }
+</script>
+
+<head>
+<body align=center>
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button type="button" onclick="getLocation()">试一下</button>
+</body>
+</html>

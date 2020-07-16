@@ -1,0 +1,64 @@
+<!--
+ * @Description: HTML5拖放案例
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-16 11:06:36
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-16 11:35:41
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      #div1 {
+        width: 198px;
+        height: 66px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+    </style>
+    <title>HTML5拖放</title>
+    <!-- dataTransfer对象：
+    setData(format,data)：在dataTransfer对象上储存数据。第一个参数format用来指定储存的数据类型，比如text、url、text/html 
+    getData(format):从dataTransfer对象中取出数据
+    clearData(format):清除dataTransfer对象储存的数据，如果指定了format参数，则只清除该格式的数据，否则清除所有数据
+    setDragImage(imgElement,x,y):指定拖动过程中显示的图像，参数imgElement必须是一个图像元素，而不是路径
+    参数x和y表示图像相对于鼠标的位置-->
+    <script type="text/javascript">
+      // ondragover事件绑定allowDrop属性：阻止默认处理方式
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      // 设置被拖动的数据的数据类型和值
+      function drag(ev) {
+        ev.dataTransfer.setData("Text", ev.target.id);
+      }
+      //   当放置被拖的数据时，会发生drop事件
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </head>
+  <body>
+    <p>请把 W3School 的图片拖放到矩形中：</p>
+    <!-- 设置放置对象：能够接受拖放元素的对象，放置对象至少需要监听两个事件：dragover和drop事件
+    dragover事件：被拖动元素停留在放置对象之中持续触发，默认方式下无法将数据/元素放置到其他元素中，需要设置允许放置，必须阻止对元素的默认处理方式
+            通过给ondragover事件属性绑定allowDrop(event)函数在函数中使用event.preventDefault()方法来实现阻止默认处理方式
+    drop事件：绑定drop(event)函数放置功能，阻止对元素的默认处理方式，ev.preventDefault()
+    获取拖放元素的数据信息，var data=ev.dataTransfer.getData('Text')
+    添加被拖放的元素 ev.target.appendChild(document.getElementById(data))
+        -->
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br />
+    <!-- 拖放drag和drop：抓取对象后拖到另外一个位置，任何元素都能够拖放，只要设置draggable属性为true即可
+    ondragstart事件：网页元素开始拖动时触发ondragstart="drag(event)" -->
+    <img
+      id="drag1"
+      src="/image/eg_dragdrop_w3school.gif"
+      draggable="true"
+      ondragstart="drag(event)"
+    />
+  </body>
+</html>

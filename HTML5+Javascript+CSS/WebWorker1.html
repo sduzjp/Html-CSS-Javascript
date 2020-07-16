@@ -1,0 +1,66 @@
+<!--
+ * @Description: WebWorker实例1--计数
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-16 11:56:52
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-16 15:28:36
+-->
+<!DOCTYPE html>
+<html>
+  <body align="center" style="font-size: 25px;">
+    <!-- output标签位置用来放置后台demo_workers.js传过来的数据 -->
+    <p>计数: <output id="result"></output></p>
+    <!-- 开始worker和停止worker的按钮 -->
+    <button onclick="startWorker()" style="font-size: 24px;">
+      开始 Worker
+    </button>
+    <button onclick="stopWorker()" style="font-size: 24px; margin-left: 20px;">
+      停止 Worker
+    </button>
+    <button onclick="resetWorker()" style="font-size: 24px; margin-left: 20px;">
+      复位重启 Worker
+    </button>
+    <br /><br />
+
+    <script>
+      // 注意区分worker和Worker
+      var worker; /* 定义全局变量 */
+      function startWorker() {
+        /* 定义启动worker函数 */
+        if (typeof Worker !== "undefined") {
+          /* 若浏览器支持Worker则值不为undefined */
+          if (typeof worker == "undefined") {
+            /* 判断worker变量是否存在 */
+            worker = new Worker(
+              "demo_workers.js"
+            ); /* 不存在则主动创建一个Worker对象 */
+          }
+          //   事件监听器，动态分配事件属性，绑定处理函数
+          worker.onmessage = function (event) {
+            document.getElementById("result").innerHTML =
+              event.data; /* 捕获传递的消息，显示在指定的标记内
+            event.data中的存放的就是来自新线程postMessage(data)方法回传的数据 */
+          };
+        } else {
+          /* 如果浏览器不支持Worker，则返回 */
+          document.getElementById("result").innerHTML =
+            "Sorry, your browser does not support Web Workers！";
+        }
+      }
+      //   终止线程
+      function stopWorker() {
+        worker.terminate(); /* 终止新线程 */
+        // worker = new Worker("demo_workers.js");
+        /* 重新创建变量同名的线程，之后可以重新启动Worker，否则
+        无法在重新启动，但是实际上从这里创建之后后台就开始计时了 */
+      }
+      //   添加一个复位重新计时的函数
+      function resetWorker() {
+        worker.terminate();
+        worker = new Worker("demo_workers.js");
+        startWorker();
+      }
+    </script>
+  </body>
+</html>

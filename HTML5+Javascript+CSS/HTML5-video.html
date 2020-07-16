@@ -1,0 +1,61 @@
+<!--
+ * @Description: HTML5播放视频实例
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-16 15:47:10
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-16 16:00:14
+-->
+<!DOCTYPE html>
+<html>
+  <body align="center">
+    <div style="text-align: center;">
+      <!-- 初始画面框为中等 -->
+      <video id="video1" width="420" style="margin-top: 15px;">
+        <source src="/video/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <br />
+      <br />
+      <!-- 播放暂停视频的按钮 -->
+      <button onclick="playPause()" style="font-size: 20px;">播放/暂停</button>
+      <!-- 大视频画面框 -->
+      <button onclick="makeBig()" style="font-size: 20px; margin-left: 10px;">
+        大
+      </button>
+      <!-- 中等视频画面框 -->
+      <button
+        onclick="makeNormal()"
+        style="font-size: 20px; margin-left: 10px;"
+      >
+        中
+      </button>
+      <!-- 小视频画面框 -->
+      <button onclick="makeSmall()" style="font-size: 20px; margin-left: 10px;">
+        小
+      </button>
+    </div>
+
+    <script type="text/javascript">
+      var myVideo = document.getElementById("video1");
+
+      function playPause() {
+        if (myVideo.paused) myVideo.play();
+        else myVideo.pause();
+      }
+
+      function makeBig() {
+        myVideo.width = 560;
+      }
+
+      function makeSmall() {
+        myVideo.width = 320;
+      }
+
+      function makeNormal() {
+        myVideo.width = 420;
+      }
+    </script>
+  </body>
+</html>

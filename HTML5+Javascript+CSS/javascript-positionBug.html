@@ -2,25 +2,47 @@
  * @Description:  这段javascript脚本只能放在p id=demo之后才能起作用，不能放到之前或者头部head中 
 但是如果把这段javascript中的 var x = document.getElementById("demo")去掉，x都直接用document.getElementById("demo")
 那么这段代码放在p标签之前或者头部都可以起作用 
+这是因为html文档是由上到下的解析顺序，ID要放到JS代码上面
+网页中的javaScript脚本代码往往需要在文档加载完成后才能够去执行，否则可能导致无法获取对象的情况
  * @Author: 周健平
  * @department: 山东大学
  * @Date: 2020-07-15 18:05:52
  * @LastEditors: 周健平
- * @LastEditTime: 2020-07-15 18:08:33
--->
+ * @LastEditTime: 2020-07-16 11:04:59
+ -->
 <!DOCTYPE html>
 <html>
   <head>
     <script>
-      var x = document.getElementById("demo");
-      function hello() {
-        // document.getElementById("demo").innerHTML = "helloworld";
-        x.innerHTML = "helloworld";
-      }
+      // 可以使用window.onload来解决getElementById放在id前面的问题，但是却无法做到点击按钮再显示，直接就显示了
+      // 这是因为它在网页加载完毕后就会自动执行这段javascript代码
+      window.onload = function () {
+        var x = document.getElementById("demo1");
+        function hello() {
+          // document.getElementById("demo").innerHTML = "helloworld";
+          x.innerHTML = "helloworld";
+        }
+        hello();
+      };
     </script>
   </head>
   <body>
     <p id="demo">你好世界</p>
-    <button onclick="hello()">试一下</button>
+    <p id="demo1"></p>
   </body>
 </html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function hello() {
+        document.getElementById("demo").innerHTML = "HelloWorld";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo" onclick="hello()">你好世界</p>
+  </body>
+</html> -->

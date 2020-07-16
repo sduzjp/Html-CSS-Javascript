@@ -1,0 +1,60 @@
+<!--
+ * @Description: HTML5 Web Worker
+ * @Author: 周健平
+ * @department: 山东大学
+ * @Date: 2020-07-16 11:46:05
+ * @LastEditors: 周健平
+ * @LastEditTime: 2020-07-16 15:29:43
+-->
+<!-- Web worker是运行在后台的Javascrip，独立于其他脚本，不会影响页面的性能，它允许开发人员编写能够长时间运行
+而不被用户所中断的后台程序。
+web worker出现的原因：由于在html页面中执行脚本的时候，页面的状态是不可响应的，必须直到脚本已完成，因此如果脚本
+长时间运行，就不能直接放在html中，需要放置到后台运行，需要时再把运行结果传回html网页中显示 -->
+<html lang="en">
+  <body align="center">
+    <h1>每秒随机产生10个100以内的2位整数:</h1>
+    <p id="result" style="height: 20px; font-size: 18px;"></p>
+    <button onclick="startMyWorker()" style="font-size: 25px;">
+      开始 Worker
+    </button>
+    <button
+      onclick="stopMyWorker()"
+      style="font-size: 25px; margin-left: 20px;"
+    >
+      停止 Worker
+    </button>
+    <script>
+      var worker; //定义全局变量
+      function $(id) {
+        return document.getElementById(id);
+      } //通过id获取对象
+
+      function startMyWorker() {
+        //启动我的worker
+        if (typeof Worker != "undefined") {
+          //浏览器支持Web Worker
+          if (typeof worker == "undefined") {
+            //判断worker变量是否存在
+            worker = new Worker("myWorker.js"); //不存在则创建Worker对象
+          }
+          //添加事件监听器，动态分配事件属性，绑定处理函数
+          worker.onmessage = function (event) {
+            //捕获传递的消息,
+            $("result").innerHTML = event.data; //显示在指定的标记内
+            //event.data 中存放来自新线程postMessage(data)方法回传的数据
+          };
+        } else {
+          //浏览器不支持Web Worker
+          $("result").innerHTML = "对不起,您的浏览器不支持Web Worker...";
+        }
+      }
+      function stopMyWorker() {
+        worker.terminate(); //终止新线程
+        worker = new Worker("myWorker.js");
+        /* 终止新的线程之后如果再启动必须创建新的线程，不能直接用原来的
+        这里重新创建新的worker，只不过变量名和原来的相同，这是为了和startMyWorker中的变量名相同，
+        可以重新调用函数,需要注意的是实际上从创建这个线程之后后台js脚本就已经开始运行 */
+      }
+    </script>
+  </body>
+</html>
